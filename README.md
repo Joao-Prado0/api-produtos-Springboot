@@ -12,13 +12,13 @@
 ## Executar a aplicação
 ```bash
 
-./mvn spring-boot:run
+./mvnw spring-boot:run
 
 ```
 
 ## Testar a Aplicação
 ```bash
 
-./mvn test
+./mvnw test
 
 ```
