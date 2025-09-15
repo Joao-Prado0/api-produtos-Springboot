@@ -1,0 +1,33 @@
+package com.exemplo.app.model;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Negative;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
+
+import java.math.BigDecimal;
+
+@Table
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode(of="id")
+
+public class Produto {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @NotBlank
+    private String nome;
+
+    @Negative
+    private int quantidade;
+
+    @Negative
+    private BigDecimal preco;
+
+}
